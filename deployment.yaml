@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: abc-order-management
+spec:
+  selector:
+    matchLabels:
+      app: abc-order-management
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: abc-order-management
+    spec:
+      containers:
+        - name: abc-order-management
+          image: byhan28/abc-order-management:v1
+          ports:
+            - containerPort: 8080

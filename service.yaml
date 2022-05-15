@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: abc-order-management
+spec:
+  selector:
+    app: abc-order-management
+  ports:
+    - protocol: TCP
+      port: 8080
+  type: LoadBalancer
